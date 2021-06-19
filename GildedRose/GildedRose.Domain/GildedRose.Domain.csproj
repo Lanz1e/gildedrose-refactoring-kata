@@ -39,6 +39,11 @@
   <ItemGroup>
     <Compile Include="Models\Base\Item.cs" />
     <Compile Include="Models\Base\ItemCompanion.cs" />
+    <Compile Include="Models\Items\AgedBrie.cs" />
+    <Compile Include="Models\Items\BackstagePasses.cs" />
+    <Compile Include="Models\Items\Default.cs" />
+    <Compile Include="Models\Items\ManaCake.cs" />
+    <Compile Include="Models\Items\Sulfuras.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
