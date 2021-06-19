@@ -17,10 +17,10 @@ namespace csharp
 			int[] sellInTestValues = { -1, 1, 5, 7, 11 };
             int[] qualityTestValues = { 0, 1, 49, 51 };
 
-            CombinationApprovals.VerifyAllCombinations(UpdateQualitySender, nameTestValues, sellInTestValues, qualityTestValues);
+            CombinationApprovals.VerifyAllCombinations(UpdateQualityTestSender, nameTestValues, sellInTestValues, qualityTestValues);
         }
 
-		private string UpdateQualitySender(string name, int sellIn, int quality)
+		private string UpdateQualityTestSender(string name, int sellIn, int quality)
         {
             IList<Item> items = new List<Item> { new Item { Name = name, SellIn = sellIn, Quality = quality } };
             GildedRose app = new GildedRose(items);

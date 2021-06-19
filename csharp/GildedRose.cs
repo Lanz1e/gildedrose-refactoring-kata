@@ -4,6 +4,10 @@ namespace csharp
 {
     public class GildedRose
     {
+        private const int MAX_ITEM_QUALITY = 50;
+        private const int MIN_ITEM_QUALITY = 0;
+        private const int INCREASE_QUALITY_RATE = 1;
+        private const int DECREASE_QUALITY_RATE = 1;
         private readonly IList<Item> items;
 
         public GildedRose(IList<Item> items)
@@ -24,39 +28,39 @@ namespace csharp
             switch (item.Name)
             {
                 case "Aged Brie":
-                    if (item.Quality < 50)
+                    if (item.Quality < MAX_ITEM_QUALITY)
                     {
-                        item.Quality++;
+                        item.Quality += INCREASE_QUALITY_RATE;
                     }
 
                     item.SellIn--;
 
                     if (item.SellIn < 0)
                     {
-                        if (item.Quality < 50)
+                        if (item.Quality < MAX_ITEM_QUALITY)
                         {
-                            item.Quality++;
+                            item.Quality += INCREASE_QUALITY_RATE;
                         }
                     }
                     break;
                 case "Backstage passes to a TAFKAL80ETC concert":
-                    if (item.Quality < 50)
+                    if (item.Quality < MAX_ITEM_QUALITY)
                     {
                         item.Quality++;
 
                         if (item.SellIn < 11)
                         {
-                            if (item.Quality < 50)
+                            if (item.Quality < MAX_ITEM_QUALITY)
                             {
-                                item.Quality++;
+                                item.Quality += INCREASE_QUALITY_RATE;
                             }
                         }
 
                         if (item.SellIn < 6)
                         {
-                            if (item.Quality < 50)
+                            if (item.Quality < MAX_ITEM_QUALITY)
                             {
-                                item.Quality++;
+                                item.Quality += INCREASE_QUALITY_RATE;
                             }
                         }
                     }
@@ -70,8 +74,30 @@ namespace csharp
                     break;
                 case "Sulfuras, Hand of Ragnaros":
                     break;
+                case "Conjured Mana Cake":
+                    if (item.Quality > MIN_ITEM_QUALITY)
+                    {
+                        item.Quality -= DECREASE_QUALITY_RATE * 2;
+
+                        if (item.Quality < 0)
+                            item.Quality = MIN_ITEM_QUALITY;
+                    }
+
+                    item.SellIn--;
+
+                    if (item.SellIn < 0)
+                    {
+                        if (item.Quality > MIN_ITEM_QUALITY)
+                        {
+                            item.Quality -= DECREASE_QUALITY_RATE * 2;
+
+                            if (item.Quality < 0)
+                                item.Quality = MIN_ITEM_QUALITY;
+                        }
+                    }
+                    break;
                 default:
-                    if (item.Quality > 0)
+                    if (item.Quality > MIN_ITEM_QUALITY)
                     {
                         item.Quality--;
                     }
@@ -80,7 +106,7 @@ namespace csharp
 
                     if (item.SellIn < 0)
                     {
-                        if (item.Quality > 0)
+                        if (item.Quality > MIN_ITEM_QUALITY)
                         {
                             item.Quality--;
                         }
