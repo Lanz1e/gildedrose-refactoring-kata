@@ -1,5 +1,5 @@
 ﻿using GildedRose.Configurations.Setup;
-using GildedRose.Domain.Models;
+using GildedRose.Domain.Models.Base;
 using System;
 using System.Collections.Generic;
 

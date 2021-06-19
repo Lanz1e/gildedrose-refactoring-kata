@@ -1,5 +1,5 @@
 ﻿using GildedRose.Application.Interfaces;
-using GildedRose.Domain.Models;
+using GildedRose.Domain.Models.Base;
 using System.Collections.Generic;
 
 namespace GildedRose.Application.Services

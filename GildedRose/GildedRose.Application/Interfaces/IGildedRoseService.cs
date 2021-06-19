@@ -1,4 +1,4 @@
-﻿using GildedRose.Domain.Models;
+﻿using GildedRose.Domain.Models.Base;
 using System.Collections.Generic;
 
 namespace GildedRose.Application.Interfaces

@@ -1,7 +1,7 @@
 ﻿using ApprovalTests.Combinations;
 using ApprovalTests.Reporters;
 using GildedRose.Application.Services;
-using GildedRose.Domain.Models;
+using GildedRose.Domain.Models.Base;
 using NUnit.Framework;
 using System.Collections.Generic;
 
