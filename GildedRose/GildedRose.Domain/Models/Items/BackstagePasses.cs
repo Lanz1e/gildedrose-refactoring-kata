@@ -2,7 +2,7 @@
 
 namespace GildedRose.Domain.Models.Items
 {
-    public class BackstagePasses : ItemCompanion
+    public class BackstagePasses : CompleteItem
     {
         public BackstagePasses(string name, int sellIn, int quality) : base(name, sellIn, quality)
         {

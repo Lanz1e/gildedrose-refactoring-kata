@@ -2,7 +2,7 @@
 
 namespace GildedRose.Domain.Models.Items
 {
-    public class ManaCake : ItemCompanion
+    public class ManaCake : CompleteItem
     {
         public ManaCake(string name, int sellIn, int quality) : base(name, sellIn, quality)
         {

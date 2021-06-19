@@ -2,7 +2,7 @@
 
 namespace GildedRose.Domain.Models.Items
 {
-    public class Sulfuras : ItemCompanion
+    public class Sulfuras : CompleteItem
     {
         public Sulfuras(string name, int sellIn, int quality) : base(name, sellIn, quality)
         {

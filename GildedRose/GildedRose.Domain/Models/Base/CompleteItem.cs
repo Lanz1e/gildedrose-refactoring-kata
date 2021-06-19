@@ -1,20 +1,20 @@
 ﻿namespace GildedRose.Domain.Models.Base
 {
-    public abstract class ItemCompanion : Item
+    public abstract class CompleteItem : Item
     {
         protected const int MAX_ITEM_QUALITY = 50;
         protected const int MIN_ITEM_QUALITY = 0;
         protected const int INCREASE_QUALITY_RATE = 1;
         protected const int DECREASE_QUALITY_RATE = 1;
 
-        public ItemCompanion(string name, int sellIn, int quality)
+        public CompleteItem(string name, int sellIn, int quality)
         {
             Name = name;
             SellIn = sellIn;
             Quality = quality;
         }
 
-        protected ItemCompanion()
+        protected CompleteItem()
         {
         }
 

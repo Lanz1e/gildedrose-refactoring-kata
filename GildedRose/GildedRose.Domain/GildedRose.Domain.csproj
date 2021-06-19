@@ -38,7 +38,7 @@
   <ItemGroup />
   <ItemGroup>
     <Compile Include="Models\Base\Item.cs" />
-    <Compile Include="Models\Base\ItemCompanion.cs" />
+    <Compile Include="Models\Base\CompleteItem.cs" />
     <Compile Include="Models\Items\AgedBrie.cs" />
     <Compile Include="Models\Items\BackstagePasses.cs" />
     <Compile Include="Models\Items\Default.cs" />

@@ -5,8 +5,8 @@ namespace GildedRose.Application.Interfaces
 {
     public interface IGildedRoseService
     {
-        void SetItems(IList<Item> items);
-        IList<Item> GetItems();
+        void SetItems(List<CompleteItem> items);
+        IList<CompleteItem> GetItems();
         void UpdateQuality();
     }
 }

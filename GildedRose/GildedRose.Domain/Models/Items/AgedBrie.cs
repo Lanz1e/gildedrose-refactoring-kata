@@ -2,7 +2,7 @@
 
 namespace GildedRose.Domain.Models.Items
 {
-    public class AgedBrie : ItemCompanion
+    public class AgedBrie : CompleteItem
     {
         public AgedBrie(string name, int sellIn, int quality): base(name, sellIn, quality)
         {

@@ -2,7 +2,7 @@
 
 namespace GildedRose.Domain.Models.Items
 {
-    public class Default : ItemCompanion
+    public class Default : CompleteItem
     {
         public Default(string name, int sellIn, int quality) : base(name, sellIn, quality)
         {
@@ -11,10 +11,7 @@ namespace GildedRose.Domain.Models.Items
 
         public override void QualityHandler()
         {
-            if (Quality > MAX_ITEM_QUALITY)
-            {
-                DecreaseQuality(1);
-            }
+            DecreaseQuality(1);
         }
 
         public override void SellInCallback()
