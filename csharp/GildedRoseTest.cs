@@ -1,18 +1,32 @@
-﻿using NUnit.Framework;
+﻿using ApprovalTests.Combinations;
+using ApprovalTests.Reporters;
+using NUnit.Framework;
 using System.Collections.Generic;
 
 namespace csharp
 {
+    [UseReporter(typeof(DiffReporter))]
     [TestFixture]
     public class GildedRoseTest
     {
         [Test]
-        public void foo()
+        public void UpdateQuality()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "foo", SellIn = 0, Quality = 0 } };
-            GildedRose app = new GildedRose(Items);
+			string[] nameTestValues = { "+5 Dexterity Vest", "Aged Brie", 
+                "Backstage passes to a TAFKAL80ETC concert", "Elixir of the Mongoose", "Sulfuras, Hand of Ragnaros", "Conjured Mana Cake" };
+			int[] sellInTestValues = { -1, 1, 5, 7, 11 };
+            int[] qualityTestValues = { 0, 1, 49, 51 };
+
+            CombinationApprovals.VerifyAllCombinations(UpdateQualitySender, nameTestValues, sellInTestValues, qualityTestValues);
+        }
+
+		private string UpdateQualitySender(string name, int sellIn, int quality)
+        {
+            IList<Item> items = new List<Item> { new Item { Name = name, SellIn = sellIn, Quality = quality } };
+            GildedRose app = new GildedRose(items);
             app.UpdateQuality();
-            Assert.AreEqual("fixme", Items[0].Name);
+
+            return app.getItems()[0].ToString();
         }
     }
 }
