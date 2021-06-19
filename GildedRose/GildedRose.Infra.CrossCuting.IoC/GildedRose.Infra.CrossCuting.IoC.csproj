@@ -58,5 +58,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GildedRose.Application\GildedRose.Application.csproj">
+      <Project>{519C513A-86B9-42D7-91FA-E78EF4F93603}</Project>
+      <Name>GildedRose.Application</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

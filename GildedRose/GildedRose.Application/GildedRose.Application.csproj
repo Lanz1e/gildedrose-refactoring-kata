@@ -36,8 +36,14 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\GildedRose.Domain\GildedRose.Domain.csproj">
+      <Project>{50C8BF72-9B1E-4CEE-9A7F-15C2ED77B9E3}</Project>
+      <Name>GildedRose.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\IGildedRoseService.cs" />
+    <Compile Include="Services\GildedRoseService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

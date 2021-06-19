@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using GildedRose.Application.Interfaces;
+using GildedRose.Application.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 
 namespace GildedRose.Infra.CrossCuting.IoC
@@ -26,7 +28,7 @@ namespace GildedRose.Infra.CrossCuting.IoC
         private static IServiceProvider GetServiceProvider()
         {
             return new ServiceCollection()
-                .AddTransient<IGildedRose, GildedRose>()
+                .AddTransient<IGildedRoseService, GildedRoseService>()
                 .BuildServiceProvider();
         }
     }

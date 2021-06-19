@@ -1,12 +1,13 @@
-﻿using GildedRose.Infra.CrossCuting.IoC;
+﻿using GildedRose.Application.Interfaces;
+using GildedRose.Infra.CrossCuting.IoC;
 
 namespace GildedRose.Configurations.Setup
 {
     public static class DependencyInjectionSetup
     {
-        public static IGildedRose AddDependencyInjectionSetup()
+        public static IGildedRoseService AddDependencyInjectionSetup()
         {
-            return DependencyInjector.Instance.GetService<IGildedRose>();
+            return DependencyInjector.Instance.GetService<IGildedRoseService>();
         }
     }
 }

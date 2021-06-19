@@ -1,4 +1,5 @@
 ﻿using GildedRose.Configurations.Setup;
+using GildedRose.Domain.Models;
 using System;
 using System.Collections.Generic;
 
@@ -10,7 +11,7 @@ namespace GildedRose
         {
             Console.WriteLine("OMGHAI!");
 
-            var application = DependencyInjectionSetup.AddDependencyInjectionSetup();
+            var gildedRoseService = DependencyInjectionSetup.AddDependencyInjectionSetup();
 
             IList<Item> Items =
                 new List<Item> {
@@ -61,7 +62,7 @@ namespace GildedRose
                     }
                 };
 
-            var app = new GildedRose(Items);
+            gildedRoseService.SetItems(Items);
 
             for (var i = 0; i < 31; i++)
             {
@@ -72,7 +73,7 @@ namespace GildedRose
                     Console.WriteLine(Items[j]);
                 }
                 Console.WriteLine("");
-                app.UpdateQuality();
+                gildedRoseService.UpdateQuality();
             }
 
             Console.ReadKey();
