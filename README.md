@@ -1,8 +1,6 @@
-#Gilded Rose
+# Gilded Rose
 
-Este repositório está sendo utilizado para refatorar o [GildedRose](https://github.com/emilybache/GildedRose-Refactoring-Kata/tree/main/csharp), a linguagem escolhida foi C#. Primeiro o código foi refatorado em sua arquitetura original, depois implementado em um arquitetura baseada em DDD.
-
-## O problema pode ser é explicado abaixo:
+Este repositório está sendo utilizado para refatorar o [GildedRose](https://github.com/emilybache/GildedRose-Refactoring-Kata), a linguagem escolhida foi [C#](https://github.com/emilybache/GildedRose-Refactoring-Kata/tree/main/csharp). Primeiro o código foi refatorado em sua arquitetura original, depois implementado em um arquitetura baseada em DDD.
 
 # Especificações de Requisitos de Gilded Rose
 
